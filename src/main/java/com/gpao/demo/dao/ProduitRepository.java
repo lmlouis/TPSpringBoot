@@ -1,4 +1,8 @@
 package com.gpao.demo.dao;
 
-public interface ProduitRepository {
+import com.gpao.demo.entities.Produit;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface ProduitRepository extends JpaRepository<Produit, Long> {
+
 }
