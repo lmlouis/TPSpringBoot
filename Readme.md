@@ -424,3 +424,41 @@ ${msg}
 
 ### Etape2 - Controller RestAPI
 ***
+`ProduitController`
+```
+@RestController
+public class ProduitController {
+    @Autowired
+    ProduitServiceImpl produitServiceImpl;
+
+    @GetMapping("/produits")
+    private List<Produit> getAllProduits(){
+        return produitServiceImpl.getAllProduits();
+    }
+
+    @PostMapping("/addProduit")
+     private Long saveProduit(@RequestBody Produit produit)
+    {
+        produitServiceImpl.saveProduit(produit);
+        return produit.getIdProduit();
+    }
+
+    @GetMapping("/produit/{produitId}")
+    private Produit getProduit(@PathVariable("produitId") long Id)
+    {
+        return produitServiceImpl.getProduit(Id);
+    }
+
+    @DeleteMapping("/produit/{produitId}")
+    private void produitDelete(@PathVariable("produitId") long Id){
+        produitServiceImpl.deleteProduitById(Id);
+    }
+
+    @PutMapping("/produits")
+    private Produit update(@RequestBody Produit produit)
+    {
+        produitServiceImpl.updateProduit(produit);
+        return produit;
+    }
+}
+```

@@ -14,6 +14,7 @@ import java.util.Date;
 import java.util.List;
 
 public class ProduitControllerJSP {
+/*
     @Autowired
     ProduitService produitService;
 
@@ -83,5 +84,6 @@ public class ProduitControllerJSP {
 
         return "listeProduits";
     }
+*/
 
 }
