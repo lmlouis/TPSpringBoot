@@ -286,3 +286,22 @@ public class ProduitController {
     }
 }
 ```
+
+## Créer un fichier.jar 
+
+### configuration d'artéfact pout le JAR 
+- Intélij créera le fichier `MANIFEST.MF` dans `src/main/resources/META-INF/MANIFEST.MF`
+- Intélij créera le fichier `produit.jar` dans `out/artifacts/produits_jar`
+### `Intélij`
+****
+
+- `File>project Structure` clicker sur `Artefact`
+- cliker `+` pointer sur `JAR>from module with dependances`
+- selectionner la classe main du projet 
+- Appliquer les modifications 
+
+<img src='https://resources.jetbrains.com/help/img/idea/2022.1/manifest.animated.gif' />
+
+### Construire l'artefact JAR
+- Menu principale :` Build>Build artefact> jar `
+<img src="https://resources.jetbrains.com/help/img/idea/2022.1/jt-jar-built.png" />
